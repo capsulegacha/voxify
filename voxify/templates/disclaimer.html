@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voxify - Health Disclaimer</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <div class="background-waves"></div>
+    <div class="main-container">
+        <header>
+            <div class="lang-icon">文A</div>
+        </header>
+        
+        <main>
+            <div class="content-left">
+                <img src="{{ url_for('static', filename='images/voxify_logo.png') }}" alt="Voxify Logo" class="logo-image">
+            </div>
+
+            <div class="content-right">
+                <div class="disclaimer-container">
+                    <h2 class="disclaimer-title">Health Disclaimer</h2>
+
+                    <div class="disclaimer-item">
+                        <h3>Not a medical device</h3>
+                        <p>This app offers general detection and health information and is not a substitute for professional medical advice.</p>
+                    </div>
+
+                    <div class="disclaimer-item">
+                        <h3>For information purpose</h3>
+                        <p>Consult your doctor or healthcare professional before starting any new exercise program or consuming drugs.</p>
+                    </div>
+
+                    <div class="disclaimer-item">
+                        <h3>Features limit</h3>
+                        <p>Please note that this app does not count your oxygen levels, your breathing rate, but can help you make a data diary.</p>
+                    </div>
+<a href="{{ url_for('tracking') }}" class="next-btn">NEXT &raquo;</a>
+                    
+                </div>
+            </div>
+        </main>
+    </div>
+
+</body>
+</html>

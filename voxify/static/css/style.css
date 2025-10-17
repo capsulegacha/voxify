@@ -1,0 +1,449 @@
+/* Gaya Dasar */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Poppins', sans-serif;
+    background-color: #F8F9FA;
+    overflow: hidden;
+}
+
+/* Pola Gelombang (untuk halaman-halaman awal) */
+.background-waves {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    background-image:
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 320'%3E%3Cpath fill='%23DDE1E4' fill-opacity='0.7' d='M0,160L40,181.3C80,203,160,245,240,245.3C320,245,400,203,480,197.3C560,192,640,224,720,229.3C800,235,880,213,960,186.7C1040,160,1120,128,1200,128C1280,128,1360,160,1400,176L1440,192L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z'%3E%3C/path%3E%3C/svg%3E"),
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 320'%3E%3Cpath fill='%23E9ECEF' fill-opacity='0.7' d='M0,192L48,176C96,160,192,128,288,133.3C384,139,480,181,576,202.7C672,224,768,224,864,197.3C960,171,1056,117,1152,106.7C1248,96,1344,128,1392,144L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z'%3E%3C/path%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: cover;
+}
+
+/* Kontainer Utama (Untuk halaman-halaman awal) */
+.main-container {
+    position: relative;
+    z-index: 1;
+    padding: 2rem 5rem;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    box-sizing: border-box;
+}
+header { display: flex; justify-content: flex-end; }
+.lang-icon { font-size: 1.5rem; font-weight: 500; color: #555; cursor: pointer; }
+main { display: flex; flex-grow: 1; align-items: stretch; justify-content: space-between; }
+.content-left { flex-basis: 50%; display: flex; justify-content: center; align-items: center; }
+.logo-image { width: 500px; height: auto; }
+.content-right { flex-basis: 50%; display: flex; flex-direction: column; align-items: center; justify-content: center; }
+
+/* === STYLING SPESIFIK HALAMAN === */
+
+/* Halaman Awal (index.html) */
+#continue-btn { background-color: #D92B3A; color: white; border: none; padding: 0.9rem 2.8rem; font-size: 1.1rem; font-weight: bold; border-radius: 50px; cursor: pointer; box-shadow: 0px 5px 15px rgba(217, 43, 58, 0.3); transition: all 0.3s ease; text-transform: uppercase; letter-spacing: 0.05em; position: relative; z-index: 5; bottom: 100px; }
+#continue-btn:hover { background-color: #B52430; transform: translateY(-2px); }
+.people-image { position: absolute; bottom: 0; right: 5rem; max-height: 60vh; width: auto; max-width: 45%; }
+
+/* Halaman Login (login.html) */
+.login-form { width: 350px; display: flex; flex-direction: column; }
+.login-form input[type="text"], .login-form input[type="password"] { width: 100%; padding: 14px 20px; margin-bottom: 1.2rem; border: 1px solid #ccc; border-radius: 50px; font-size: 1rem; font-family: 'Poppins', sans-serif; box-sizing: border-box; transition: border-color 0.3s; }
+.login-form input:focus { outline: none; border-color: #007BFF; }
+.forgot-password { text-align: center; font-size: 0.8rem; color: #888; text-decoration: none; margin-bottom: 1.5rem; display: block; }
+.login-btn { background: linear-gradient(to right, #36A2EB, #007BFF); color: white; border: none; padding: 0.9rem 2.8rem; font-size: 1.1rem; font-weight: bold; border-radius: 50px; cursor: pointer; box-shadow: 0px 5px 15px rgba(0, 123, 255, 0.3); transition: all 0.3s ease; text-transform: uppercase; letter-spacing: 0.05em; }
+.login-btn:hover { transform: translateY(-2px); box-shadow: 0px 8px 20px rgba(0, 123, 255, 0.4); }
+
+/* Halaman Disclaimer (disclaimer.html) */
+.disclaimer-container { width: 450px; background-color: #eaf6ff; border: 1px solid #cde7fa; border-radius: 20px; padding: 2rem; display: flex; flex-direction: column; box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05); }
+.disclaimer-title { font-size: 1.8rem; color: #333; margin-top: 0; margin-bottom: 1.5rem; font-weight: 700; }
+.disclaimer-item { background-color: #f8f9fa; border-radius: 12px; padding: 1rem; margin-bottom: 1rem; }
+.disclaimer-item h3 { margin-top: 0; margin-bottom: 0.5rem; font-size: 1rem; color: #2c3e50; }
+.disclaimer-item p { margin: 0; font-size: 0.9rem; color: #555; line-height: 1.5; }
+
+/* Halaman Tracking & Graph (Versi Gambar) */
+.tracking-page-container { width: 450px; height: 100%; display: flex; flex-direction: column; }
+.tracking-image { width: 100%; height: auto; border-radius: 20px; box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1); }
+.next-btn { margin-top: auto; align-self: flex-end; background-color: #1e88e5; color: white; text-decoration: none; padding: 0.6rem 1.5rem; border-radius: 8px; font-weight: bold; font-size: 1rem; transition: background-color 0.3s ease; }
+.next-btn:hover { background-color: #1565c0; }
+
+/* Halaman Start Recording (start.html) */
+.start-recording-btn { background: linear-gradient(to bottom, #4dd0e1, #00acc1); color: white; text-decoration: none; font-size: 1.5rem; font-weight: bold; padding: 1.2rem 4rem; border-radius: 50px; box-shadow: 0 8px 20px rgba(0, 172, 193, 0.4); transition: all 0.3s ease; border: 3px solid #b2ebf2; }
+.start-recording-btn:hover { transform: translateY(-3px); box-shadow: 0 12px 25px rgba(0, 172, 193, 0.5); }
+
+/* Halaman Measure Tips (measure_tips.html) */
+.tips-container { width: 480px; background-color: #eaf6ff; border: 1px solid #cde7fa; border-radius: 20px; padding: 2rem; display: flex; flex-direction: column; box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05); position: relative; bottom: 30px; }
+.tips-title { font-size: 1.8rem; color: #333; margin-top: 0; margin-bottom: 1rem; font-weight: 700; text-align: center; }
+.tips-image { max-width: 90%; height: auto; border-radius: 15px; margin-bottom: 1rem; align-self: center; }
+.tip-item { display: flex; align-items: flex-start; margin-bottom: 1rem; }
+.tip-number { flex-shrink: 0; width: 30px; height: 30px; background-color: #1e88e5; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1rem; margin-right: 1rem; }
+.tip-text { margin: 0; padding-top: 4px; font-size: 0.95rem; color: #555; line-height: 1.5; }
+
+/* Halaman Measuring (measuring.html) */
+.measure-page-body { background: #F8F9FA; }
+.measure-page-body .background-waves, .measure-page-body .main-container { display: none; }
+.measure-container { max-width: 900px; margin: 2rem auto; border-radius: 20px; overflow: hidden; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); }
+.mic-btn.active { background-color: #28a745; color: white; border-color: rgba(255, 255, 255, 0.5); animation: pulse 1.5s infinite; }
+@keyframes pulse { 0% { box-shadow: 0 0 0 0 rgba(40, 167, 69, 0.7); } 70% { box-shadow: 0 0 0 20px rgba(40, 167, 69, 0); } 100% { box-shadow: 0 0 0 0 rgba(40, 167, 69, 0); } }
+
+/* === HALAMAN REPORT DASHBOARD === */
+.report-dashboard-body {
+    background-color: #eaf6ff;
+    font-family: 'Poppins', sans-serif;
+    overflow-y: auto;
+}
+.report-dashboard-body .background-waves,
+.report-dashboard-body .main-container {
+    display: none;
+}
+.report-dashboard-container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 2rem;
+}
+.measure-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    color: #333;
+    background-color: transparent;
+}
+.home-link {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: #333;
+}
+.help-icon {
+    width: 30px;
+    height: 30px;
+    border: 2px solid #ccc;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.report-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    grid-template-areas:
+        "health breathing"
+        "health noise"
+        "disease advice"
+        "disease advice";
+}
+
+.report-card {
+    background-color: white;
+    border-radius: 20px;
+    padding: 1.5rem;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.07);
+}
+
+.health-condition-card {
+    grid-area: health;
+    background-color: #36A2EB;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.health-condition-card .summary-text h3 { margin-top: 0; font-size: 1.5rem; }
+.health-condition-card .summary-text p { margin: 0.5rem 0; font-size: 1rem; opacity: 0.9; }
+.health-condition-card img { width: 150px; align-self: flex-end; }
+
+.breathing-rate-home-card { 
+    grid-area: breathing;
+}
+.breathing-rate-home-card .status-abnormal { color: #dc3545; }
+
+.noise-level-card {
+    grid-area: noise;
+    padding: 1.2rem;
+}
+.noise-level-card .stat-header { display: flex; justify-content: space-between; align-items: center; }
+.noise-level-card .stat-header p { margin: 0; }
+.noise-level-card .noise-details { display: flex; justify-content: space-around; text-align: center; margin-top: 1rem; }
+.noise-level-card .noise-details span { font-size: 1.8rem; font-weight: bold; }
+.noise-level-card .noise-details p { font-size: 0.8rem; color: #888; margin: 0; }
+
+.disease-home-card {
+    grid-area: disease;
+    padding: 2rem;
+}
+.disease-home-card h3 {
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+}
+.disease-home-card .disease-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem 1.5rem;
+}
+.disease-home-card .disease-item {
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+}
+.disease-home-card .disease-item img {
+    width: 30px;
+    margin-right: 1rem;
+}
+
+.advice-home-card {
+    grid-area: advice;
+    display: flex;
+    align-items: flex-start;
+    gap: 1.5rem;
+    padding: 2rem;
+}
+.advice-warning-icon {
+    width: 60px;
+    flex-shrink: 0;
+}
+.advice-content-wrapper {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+.advice-content-wrapper h3 {
+    margin: 0 0 1rem 0;
+    font-size: 1.5rem;
+}
+.advice-content-wrapper p {
+    margin: 0;
+    line-height: 1.6;
+    color: #555;
+}
+.advice-footer-logo {
+    margin-top: auto;
+    align-self: flex-end;
+}
+.advice-footer-logo img {
+    width: 120px;
+    opacity: 0.5;
+}
+
+.stat-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+.stat-header .bpm-display {
+    background-color: #e3f2fd;
+    color: #0d6efd;
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+    text-align: center;
+}
+.stat-header .bpm-display strong {
+    font-size: 1.5rem;
+    display: block;
+}
+.stat-header .stat-title {
+    flex-grow: 1;
+}
+.stat-header .stat-title p {
+    margin: 0;
+}
+.stat-header .stat-title p strong,
+.noise-level-card .stat-header p strong {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+.stat-header .arrow-icon {
+    font-size: 1.5rem;
+    color: #bbb;
+    background-color: #f0f4f8;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.rate-slider .slider {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 8px;
+    background: linear-gradient(to right, #87CEEB, #9370DB, #FFA07A, #F08080);
+    border-radius: 5px;
+    outline: none;
+}
+.rate-slider .slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 18px;
+    height: 18px;
+    background: white;
+    border: 3px solid #0d6efd;
+    border-radius: 50%;
+}
+.rate-slider .slider-labels {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.7rem;
+    color: #888;
+    margin-top: 0.3rem;
+}
+
+/* === HALAMAN MEASURING (measuring.html) === */
+
+/* Mengatur ulang body khusus untuk halaman ini */
+.measure-page-body {
+    background: #F8F9FA; /* Warna dasar abu-abu muda */
+    overflow-y: auto; /* Izinkan scroll jika perlu */
+}
+
+/* Sembunyikan layout lama di halaman ini */
+.measure-page-body .background-waves,
+.measure-page-body .main-container {
+    display: none;
+}
+
+/* Kontainer utama untuk halaman measuring */
+.measure-container {
+    max-width: 900px;
+    margin: 2rem auto;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Header di halaman measuring */
+.measure-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: white;
+    color: #333;
+}
+.measure-header h1 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+.back-arrow {
+    font-size: 2rem;
+    text-decoration: none;
+    color: #555;
+}
+.help-icon {
+    width: 30px;
+    height: 30px;
+    border: 2px solid #ccc;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+/* Bagian atas yang berwarna biru */
+.measure-top-section {
+    background-color: #36A2EB;
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+/* Tombol Mikrofon */
+.mic-btn {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background-color: white;
+    border: 10px solid rgba(255, 255, 255, 0.3);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #36A2EB;
+    transition: all 0.3s ease;
+}
+.mic-btn.active {
+    background-color: #28a745; /* Warna hijau saat aktif */
+    color: white;
+    border-color: rgba(255, 255, 255, 0.5);
+    animation: pulse 1.5s infinite;
+}
+@keyframes pulse {
+    0% { box-shadow: 0 0 0 0 rgba(40, 167, 69, 0.7); }
+    70% { box-shadow: 0 0 0 20px rgba(40, 167, 69, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(40, 167, 69, 0); }
+}
+
+/* Kotak statistik live */
+.live-stats {
+    display: flex;
+    gap: 1rem;
+}
+.stat-box {
+    background-color: white;
+    border-radius: 15px;
+    padding: 1rem;
+    text-align: center;
+    color: #555;
+    width: 120px;
+}
+.stat-box p {
+    margin: 0;
+    font-size: 1.2rem;
+}
+.stat-box span {
+    font-size: 0.9rem;
+}
+
+/* Kontainer untuk animasi gelombang */
+.waveform-container {
+    flex-grow: 1;
+    height: 80px;
+}
+#waveformCanvas {
+    width: 100%;
+    height: 100%;
+}
+
+/* Bagian bawah yang berwarna putih */
+.measure-bottom-section {
+    background-color: #f0f4f8;
+    padding: 2rem;
+    text-align: center;
+}
+.measure-status {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+.status-logo {
+    width: 80px;
+    height: auto;
+    transition: filter 0.5s ease;
+}
+.status-text {
+    text-align: left;
+}
+.status-text h3, .status-text p {
+    margin: 0;
+}
+.status-hint {
+    color: #888;
+}
+.green-text {
+    color: #28a745;
+    font-weight: bold;
+}

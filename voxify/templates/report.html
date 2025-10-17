@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voxify - Report</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body class="report-dashboard-body">
+
+    <div class="report-dashboard-container">
+        <header class="measure-header">
+            <a href="{{ url_for('index') }}" class="back-arrow home-link">&larr; Home</a>
+            <div class="help-icon">?</div>
+        </header>
+
+        <div class="report-grid">
+            <div class="report-card health-condition-card">
+                <div class="summary-text">
+                    <h3>Health Condition</h3>
+                    <p>Breathing Rate: <span>24 breaths/min</span></p>
+                    <p>Lung Health Score: <span>58/100</span></p>
+                    <p>Stress Level: <span>46%</span></p>
+                    <p>Noise Level: <span>Clear (no interference)</span></p>
+                </div>
+                <img src="{{ url_for('static', filename='images/doctor.png') }}" alt="Doctor Avatar">
+            </div>
+
+            <div class="report-card breathing-rate-home-card">
+                <div class="stat-header">
+                    <div class="bpm-display"><strong>24</strong> BPM</div>
+                    <div class="stat-title">
+                        <p><strong>Breathing Rate</strong></p>
+                        <p class="status-abnormal">Above normal</p>
+                    </div>
+                    <div class="arrow-icon">&rarr;</div>
+                </div>
+                <div class="rate-slider">
+                    <input type="range" min="5" max="40" value="24" class="slider">
+                    <div class="slider-labels"><span>5</span><span>20</span><span>40</span></div>
+                </div>
+            </div>
+            
+            <div class="report-card noise-level-card">
+                <div class="stat-header">
+                    <p><strong>Noise Level</strong></p>
+                    <div class="arrow-icon">&rarr;</div>
+                </div>
+                <div class="noise-details">
+                    <div><span>38</span> dB <p>Ambient dB</p></div>
+                    <div><span>7</span> % <p>Interference Ratio</p></div>
+                    <div><span>89</span> /100 <p>Clarity Score</p></div>
+                </div>
+            </div>
+
+            <div class="report-card disease-home-card">
+                <h3>Disease Probability Analysis</h3>
+                <div class="disease-grid">
+                    <div class="disease-item"><img src="{{ url_for('static', filename='images/icon_bronchiectasis.png') }}"> Bronchiectasis: <strong>8%</strong></div>
+                    <div class="disease-item"><img src="{{ url_for('static', filename='images/icon_healthy.png') }}"> Healthy: <strong>9%</strong></div>
+                    <div class="disease-item"><img src="{{ url_for('static', filename='images/icon_bronchiolitis.png') }}"> Bronchiolitis: <strong>6%</strong></div>
+                    <div class="disease-item"><img src="{{ url_for('static', filename='images/icon_pneumonia.png') }}"> Pneumonia: <strong>58%</strong></div>
+                    <div class="disease-item"><img src="{{ url_for('static', filename='images/icon_copd.png') }}"> COPD: <strong>12%</strong></div>
+                    <div class="disease-item"><img src="{{ url_for('static', filename='images/icon_urti.png') }}"> URTI: <strong>7%</strong></div>
+                </div>
+            </div>
+
+            <div class="report-card advice-home-card">
+                <img src="{{ url_for('static', filename='images/icon_warning.png') }}" class="advice-warning-icon">
+                
+                <div class="advice-content-wrapper">
+                    <h3>Exclusive Advice</h3>
+                    <p>Your breathing pattern indicates a significant risk of pneumonia. Please seek a medical consultation immediately for further diagnosis and treatment.</p>
+                    <div class="advice-footer-logo">
+                        <img src="{{ url_for('static', filename='images/voxify_logo.png') }}" alt="Voxify Logo">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

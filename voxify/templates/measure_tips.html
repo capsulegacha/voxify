@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voxify - Measure Tips</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <div class="background-waves"></div>
+    <div class="main-container">
+        <header>
+            <div class="lang-icon">文A</div>
+        </header>
+        
+        <main>
+            <div class="content-left">
+                <img src="{{ url_for('static', filename='images/voxify_logo.png') }}" alt="Voxify Logo" class="logo-image">
+            </div>
+
+            <div class="content-right">
+                <div class="tips-container">
+                    <h2 class="tips-title">Measure Tips</h2>
+
+                    <img src="{{ url_for('static', filename='images/measure_tips.png') }}" alt="How to measure" class="tips-image">
+
+                    <div class="tips-list">
+                        <div class="tip-item">
+                            <div class="tip-number">1</div>
+                            <p class="tip-text">Hold your smartphone close to the source of breathing sound. Tap the Voice Recorder button to start detection.</p>
+                        </div>
+                        <div class="tip-item">
+                            <div class="tip-number">2</div>
+                            <p class="tip-text">Stay calm and tap the Voice Recorder button for a second time to finish the recording.</p>
+                        </div>
+                        <div class="tip-item">
+                            <div class="tip-number">3</div>
+                            <p class="tip-text">Please make sure your breathing sound is recorded clearly without background noise or interference.</p>
+                        </div>
+                    </div>
+
+                    <a href="{{ url_for('measuring') }}" class="next-btn">NEXT &raquo;</a>
+                </div>
+            </div>
+        </main>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voxify - Data Tracking</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <div class="background-waves"></div>
+    <div class="main-container">
+        <header>
+            <div class="lang-icon">文A</div>
+        </header>
+        
+        <main>
+            <div class="content-left">
+                <img src="{{ url_for('static', filename='images/voxify_logo.png') }}" alt="Voxify Logo" class="logo-image">
+            </div>
+
+            <div class="content-right">
+                <div class="tracking-page-container"> <img src="{{ url_for('static', filename='images/tracking_ui.png') }}" alt="Data Tracking UI" class="tracking-image">
+                    
+                    <a href="{{ url_for('graph') }}" class="next-btn">NEXT &raquo;</a>
+                </div>
+            </div>
+        </main>
+    </div>
+
+</body>
+</html>
